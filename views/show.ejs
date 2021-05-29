@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="view">
+        <h1>Blog Content</h1>
+    </div>
+    <div class="container-1">
+        <h3>Title: <%=blog.title%>
+        </h3>
+        <img src="<%= blog.img%>" alt="">
+        <h4>Author: <%=blog.author%>
+        </h4>
+        <p>
+            <%= blog.desc%>...
+        </p>
+        <div id="sbm">
+            <form method="GET" action="/blogs/<%=blog._id%>/edit">
+                <button class="btn">Edit</button>
+            </form>
+            <form method="POST" action="/blogs/<%=blog._id%>?_method=Delete">
+                <button class="btn">Delete</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
